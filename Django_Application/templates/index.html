@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Details</title>
+</head>
+<body>
+	<h1>My Dashboard</h1>
+	<p></p>
+	{% if details %}
+	<table border="3">
+		<tr>
+			<th>HostName</th>
+			<th>IpAddress</th>
+		</tr>
+	{% for detail in details %}
+	<tr>
+	<td>{{detail.hostname}}</td>
+	<td> {{detail.ipaddress}}</td>
+	{% endfor %}
+	</tr>
+</table>
+	{% endif %}
+	<p>
+<form action="/add">
+<button>Alter credentials</button>
+</form>
+<p>
+<form action="/custcert">
+<button>Customise certificate</button>
+</form>
+<p>
+<form action='/trustcalculate'>
+<button>Compute TrustScore</button>
+</form>
+</body>
+</html>
+
+
+
+

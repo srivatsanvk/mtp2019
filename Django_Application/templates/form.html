@@ -1,0 +1,34 @@
+<html>
+<body>
+	<h2>Add Credentials</h2>
+ <form action="fetch" method="post">
+  username:<br>
+  <input type="text" name="username"><br>
+  password:<br>
+  <input type="password" name="password"><br>
+  <p>
+  	IpAddress:
+  	<select name="ip">
+  		<option selected="selected" disabled>--select one--</option>
+  	{% for detail in details %}	
+  	
+  <option value="{{detail.ipaddress}}">{{detail.ipaddress}}</option>
+{% endfor %}
+</select>
+  <input type="submit" value="Add"><br>
+</form> 
+<h4>Delete Credentials</h4>
+<form action="deletecreds" method="post">
+  <p>
+  	IpAddress:
+  	<select name="ipaddr">
+  		<option selected="selected" disabled>--select one--</option>
+  	{% for detail in details %}	
+  	
+  <option value="{{detail.ipaddress}}">{{detail.ipaddress}}</option>
+{% endfor %}
+</select>
+  <input type="submit" value="Delete">
+</form> 
+</body>	
+</html>

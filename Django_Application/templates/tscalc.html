@@ -1,0 +1,39 @@
+<html>
+<body>
+	<h2>Compute TrustScore</h2>
+ <form method="post" action = "computets">
+  
+  <p>
+  	IpAddress:
+  	<select name="ip">
+  		<option selected="selected" disabled>--select one--</option>
+  	{% for detail in details %}	
+  	
+  <option value="{{detail.ipaddress}}">{{detail.ipaddress}}</option>
+{% endfor %}
+</select>
+<h4>Device based parameters</h3>
+<p>
+Open connections:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="opc"><br>
+  Number of processes:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="nop"><br>
+  Cpu vulnerability:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="cv"><br>
+  Selinux / Apparmour:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="sa"><br>
+  <h4>Reputation based parameters</h3>
+<p>
+Availability:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="av"><br>
+  CA Certificate:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="ca"><br>
+  Retransmission:<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="rt"><br>
+  Delay :<br>
+  <input type="number" value=0 step="0.01" min="0" max="1" name="dl"><br>
+  <p>
+  <input type="submit" value="submit"><br>
+</form> 
+</body>
+</html>

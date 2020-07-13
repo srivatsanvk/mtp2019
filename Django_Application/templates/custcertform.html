@@ -1,0 +1,58 @@
+<html>
+<body>
+	<h2>certificate options</h2>
+	<form action="savecustcert" method="post">
+  		<p>
+  		Algorithm : RSA
+  		<p>
+		Security &ensp; : 
+		
+		<select name="security">
+  			<option selected="selected" disabled>--select one--</option>
+  			<option value="Level 1">Level 1</option>	<option value="Level 2">Level 2</option>
+  			<option value="Level 3">Level 3</option>
+
+		</select>&emsp;&emsp;&emsp;&nbsp;
+		<input type="submit" value="submit">
+	</form> 
+	<h4> Delay options </h4>
+	<form action="savecustcert" method="post">
+  		<p>
+  		Algorithm : 
+  		
+  		<input type="radio" name="algo" value="RSA" checked="checked">RSA</input>
+  		<input type="radio" name="algo" value="ECC" >ECC</input>
+  		
+
+		<p>
+		Security &ensp; : 
+		
+		<select name="security">
+  			<option selected="selected" disabled>--select one--</option>
+  			<option value="Level 1">Level 1</option>	<option value="Level 2">Level 2</option>
+  			<option value="Level 3">Level 3</option>
+
+		</select>&emsp;&emsp;&emsp;&nbsp;
+  		<input type="submit" value="submit">
+	</form> 
+	
+	<p><p>
+	
+	
+	<form action="fileupload" method="post" enctype="multipart/form-data">
+	Other algorithm : 
+	<p>
+		<input type="file" name="sample.py" />
+        <input type="submit" value="Upload" />
+	</form>
+	<form action="download" method="post">
+		<input type="submit" value="instructions for file upload">
+	</form>
+	<p>
+		<h5>Compute delay</h5>
+	<form action="/testcustcert">
+	<button>Test Delay</button>
+	</form>
+	
+</body>
+</html>
